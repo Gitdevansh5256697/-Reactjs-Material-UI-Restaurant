@@ -4,11 +4,12 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Box, Typography } from "@mui/material";
+import { Height } from "@mui/icons-material";
 
 function Footer() {
   return (
     <>
-    {/* All Icons  */}
+      {/* All Icons  */}
       <Box
         sx={{ textAlign: "center", bgcolor: "#1A1A19", color: "white", p: 3 }}
       >
@@ -30,8 +31,12 @@ function Footer() {
         >
           <Box
             sx={{
-              "@media (max-width:00px)": {
-                display: "none",
+              "@media (max-width:600px)": {
+                // display: "none",
+                width: "96vw",
+                height: "20vh",
+                // width:"1rem",
+                // Height:"1rem"
               },
             }}
           >
