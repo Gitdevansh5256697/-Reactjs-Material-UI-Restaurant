@@ -8,8 +8,9 @@ import {
   Drawer,
   Divider,
 } from "@mui/material";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
-import { Link } from "react-router-dom";
+import Logo from '../../images/logo.svg'
+// import RestaurantIcon from "@mui/icons-material/Restaurant";
+import { Link,NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import "../../styles/HeaderStyles.css";
 const Header = () => {
@@ -27,24 +28,23 @@ const Header = () => {
         component="div"
         sx={{ flexGrow: 1, my: 2 }}
       >
-        My
-        <RestaurantIcon />
-        Resturant
+        <img src={Logo} alt="logo" height={'70'} width="200"/>
+        {/* Resturant */}
       </Typography>
       <Divider />
       {/* <Box sx={{display:{xs:"none",sm:"block"}}}> */}
       <ul className="mobile-navigation">
         <li>
-          <Link to={"/"}>Home</Link>
+          <NavLink activeClassName="active" to={"/"}>Home</NavLink>
         </li>
         <li>
-          <Link to={"/menu"}>Menu</Link>
+          <NavLink to={"/menu"}>Menu</NavLink>
         </li>
         <li>
-          <Link to={"/about"}>About</Link>
+          <NavLink to={"/about"}>About</NavLink>
         </li>
         <li>
-          <Link to={"/contact"}>Contact</Link>
+          <NavLink to={"/contact"}>Contact</NavLink>
         </li>
       </ul>
     </Box>
@@ -75,23 +75,24 @@ const Header = () => {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              My
+              {/* My
               <RestaurantIcon />
-              Resturant
+              Resturant */}
+              <img src={Logo} alt="logo" height={'70'} width="250"/>
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <ul className="navigation-menu">
                 <li>
-                  <Link to={"/"}>Home</Link>
+                  <NavLink to={"/"}>Home</NavLink>
                 </li>
                 <li>
-                  <Link to={"/menu"}>Menu</Link>
+                  <NavLink to={"/menu"}>Menu</NavLink>
                 </li>
                 <li>
-                  <Link to={"/about"}>About</Link>
+                  <NavLink to={"/about"}>About</NavLink>
                 </li>
                 <li>
-                  <Link to={"/contact"}>Contact</Link>
+                  <NavLink to={"/contact"}>Contact</NavLink>
                 </li>
               </ul>
             </Box>
