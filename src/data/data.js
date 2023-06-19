@@ -5,6 +5,8 @@ import MasalaDosa from "../images/masala.jpg"
 import Paneer from "../images/paneer.jpg"
 import Gujrati from "../images/gujrati.jpeg"
 
+// Menu List Data For Menu
+
 export const  MenuList =[
     {
         name:"Dosa",
