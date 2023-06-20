@@ -23,7 +23,19 @@ const Contact = () => {
           my: 5,
           ml: 10,
           "& h4": { fontWeight: "bold", mb: 2 },
-          "& p": { fontSize: "20px" },
+          "& p": { fontSize: "20px",
+          "@media screen and (max-width: 600px) ": {
+            fontSize: "10px",
+          },
+
+          "@media screen and (mix-width: 800px) ": {
+            fontSize: "15px",
+          },
+        
+        },
+
+          
+          
         }}
       >
         <Typography variant="h4">Contact My Resturant</Typography>
@@ -36,12 +48,14 @@ const Contact = () => {
       <Box
         sx={{
           m: 3,
-          width: "600px",
+          // width: "1450px",
           ml: 10,
-          "@media (max-width:600px)": {
-            width: "200px",
+          mr:10,
+          "@media (max-width:600px) and @media (min-width:800px) ": {
+            width: "300px",
             // height:"10px"
             align: "center",
+            // marginRight:"10px"
           },
         }}
       >
@@ -51,7 +65,7 @@ const Contact = () => {
               <TableRow>
                 <TableCell
                   sx={{ bgcolor: "black", color: "white" }}
-                  align="center"
+                  // align="center"
                 >
                   Contact Detail
                 </TableCell>
